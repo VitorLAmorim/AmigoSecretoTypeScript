@@ -1,0 +1,1 @@
+{"version":3,"file":"Frontpage.js","sourceRoot":"","sources":["../../src/View/Frontpage.ts"],"names":[],"mappings":"AAAA,MAAM,MAAM;IAIR,QAAQ;QAEJ,OAAO,IAAI,CAAC,IAAI,CAAC;IACrB,CAAC;IACD,SAAS;IAET,CAAC;IAED,YAAY,IAAW,EAAC,KAAY;QAClC,IAAI,CAAC,IAAI,GAAG,IAAI,CAAC;QACjB,IAAI,CAAC,KAAK,GAAE,KAAK,CAAC;IACpB,CAAC;CAIF"}

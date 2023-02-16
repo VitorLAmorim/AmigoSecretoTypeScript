@@ -1,0 +1,10 @@
+backend/.env
+
+.vscode/
+backend/node_modules
+fronted/node_modules
+.DS_Store
+
+# Ignore built ts files
+backend/dist
+

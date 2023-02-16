@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <title>Amigo secreto</title>
+        <link rel="stylesheet" href="./assets/css/styles.css"/>
+    </head>
+    <body>
+        <div id="container">
+            <h2 id="title"> Amigo Secreto</h2>
+            <h3 id="nome">Digite o Nome:
+            <input id="nome" > </h1>
+            <h3 id="email">Digite o E-mail:
+                <input id="email" > </h1>
+
+            <button id="create"> Cadastrar pessoa</button>
+        </div>
+      <!-- <script src="dist/index.js"></script>--> 
+
+      <script> 
+            
+        const buttonCreate = document.querySelector('#create');
+        buttonCreate.addEventListener('click', async function(){
+            try{
+                const data = {name: document.querySelector('#nome').children.nome.value, email: document.querySelector('#email').children.email.value};
+                const response = await fetch('http://localhost:8080/home',{
+                method: 'post',
+                headers: {
+                    "Content-Type": "application/json",
+                  },
+                body: JSON.stringify(data),
+                })  
+            .then((response) => response.json())
+            .then((data) => {
+            console.log("Success:", data);
+  })}
+
+            catch(error){
+                console.log("error");
+            }
+        })
+
+      </script>
+    </body>
+</html>
