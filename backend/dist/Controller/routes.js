@@ -46,7 +46,7 @@ exports.pessoasRouter.post("/", (req, res) => __awaiter(void 0, void 0, void 0, 
         const novaPessoa = req.body;
         const result = yield database_services_1.collections.pessoas.insertOne(novaPessoa);
         result
-            ? res.status(201).send(`Cadastrado nova pessoa: ${result.insertedId}`)
+            ? res.status(201).send(JSON.stringify(`Cadastrado nova pessoa: ${result.insertedId}`))
             : res.status(500).send("Falha ao cadastrar");
     }
     catch (error) {

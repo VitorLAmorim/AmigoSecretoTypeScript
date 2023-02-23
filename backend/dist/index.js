@@ -8,11 +8,10 @@ const database_services_1 = require("./Services/database.services");
 const routes_1 = require("./Controller/routes");
 const cors_1 = __importDefault(require("cors"));
 const errors_1 = require("./Middleware/errors");
-const not_found_1 = require("./Middleware/not-found");
 const app = (0, express_1.default)();
 app.use((0, cors_1.default)());
 app.use(errors_1.errorHandler);
-app.use(not_found_1.notFoundHandler);
+//app.use(notFoundHandler);
 const port = 8080; // default port to listen
 (0, database_services_1.connectToDatabase)()
     .then(() => {

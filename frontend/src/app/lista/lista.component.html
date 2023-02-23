@@ -1,0 +1,13 @@
+
+
+<ul> <h4 id="campotexto">Digite o Nome: <input id="nome"> </h4>
+    <h4 id="campotexto">Digite o E-mail: <input id="email"> </h4>
+   
+    <button (click)='onSubmitForm()'>Register</button>
+    
+
+</ul>
+
+<ul *ngFor="let pessoa of pessoa">
+    <li id="{{pessoa._id}}">{{ pessoa.name }}: {{ pessoa.email }}</li>
+</ul>

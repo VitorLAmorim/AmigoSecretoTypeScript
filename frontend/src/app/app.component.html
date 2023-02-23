@@ -1,0 +1,45 @@
+
+<ul>
+  <li routerLinkActive=”link-active” [routerLinkActiveOptions]="{exact:true}"><a routerLink="/">Home</a></li>
+  <li routerLinkActive=”link-active” [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/sorteio']">Sorteio</a></li>
+  <li routerLinkActive=”link-active” [routerLinkActiveOptions]="{exact:true}"><a [routerLink]="['/lista']">Lista</a></li>
+</ul>
+<hr>
+
+ 
+<router-outlet></router-outlet> 
+
+
+
+
+<!-- 
+  
+ 
+
+  
+  
+  <h1> Olá {{getUsername()}} bem vindo ao{{ title }}</h1>
+<hr>
+<h1 [innerText]='getGreet()'></h1>
+<hr>
+<input type="text" [(ngModel)]="emailAddress">
+<p>{{ emailAddress }}@gmail.com</p>
+<hr>
+<button (click)='onSubmitForm()'>Register</button>
+<p>{{ formMessage }}</p>
+<hr>
+<h1>Componente principal</h1>
+<hr>
+
+<hr>
+
+<ul>
+  <li>Item para todos se estiver logado ou não</li>
+  <li> Item para todos se estiver logado ou não </li>
+  <li *ngIf="estaLogado;else naoEstaLogado">Somente se estiver logado</li>
+</ul>
+
+<ng-template #naoEstaLogado >
+  <p>Você não está logado</p>
+</ng-template>
+ -->
