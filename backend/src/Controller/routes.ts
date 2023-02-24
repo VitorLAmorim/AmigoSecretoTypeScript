@@ -69,6 +69,7 @@ pessoasRouter.put("/:id", async (req: Request, res: Response) => {
 
 pessoasRouter.delete("/:id", async (req: Request, res: Response) => {
     const id = req?.params?.id;
+    console.log(id);
 
     try {
         const query = { _id: new ObjectId(id) };

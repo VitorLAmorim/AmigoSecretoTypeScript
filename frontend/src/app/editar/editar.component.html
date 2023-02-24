@@ -1,0 +1,12 @@
+
+
+
+<form #cadastro="ngForm" (ngSubmit)="editarForm(cadastro)"> 
+
+    <input name="_id" ngModel value="{{pessoa._id}}" hidden="TRUE">
+    <h4 class="Legenda">Digite o Nome: <input id="pessoa-name" class="campotexto" name="name" ngModel required #name="ngModel" type="text" value="{{pessoa.name}}"> </h4>
+    <h4 class="Legenda">Digite o E-mail: <input id="pessoa-email" class="campotexto" name="email" ngModel required type="text" value="{{pessoa.email}}"> </h4>
+    <button type="submit" >Salvar</button>
+</form>
+
+

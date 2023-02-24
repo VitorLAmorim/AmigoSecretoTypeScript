@@ -2,3 +2,32 @@
 .link-active {
   background-color: red;
 }
+
+.campotexto{
+    width: 300px;    
+    
+    }
+.button{
+    margin: 5px;
+}
+table,td,th{
+    border:1px solid black; 
+
+}
+
+.action{
+    text-align-last: center;
+}
+
+thead{
+    text-align-last: center;
+}
+table{
+    width: 80%;
+    align-content: center;
+    margin-left: 10%;
+    border-collapse: collapse;
+      
+    
+}
+

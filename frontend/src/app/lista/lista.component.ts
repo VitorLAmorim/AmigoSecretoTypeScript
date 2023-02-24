@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { PessoaService } from '../pessoa.service';
 import { IPessoa } from '../pessoa';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-lista',
@@ -11,12 +12,11 @@ import { IPessoa } from '../pessoa';
 
 export class ListaComponent {
 
-
   
   public pessoa:any = [];
   constructor(private pessService: PessoaService) { }
-  ngOnInit(): void {
-    this.pessService.getPessoa().subscribe(
+  ngOnInit(): void {    
+    this.pessService.getPessoas().subscribe(
       data => {
         this.pessoa = data;
       }
@@ -24,14 +24,22 @@ export class ListaComponent {
   }
 
 
-  public formMessage!:string;
-  public onSubmitForm(){
-    
-    const pessoa :IPessoa={
+public deleteForm(id:string){
 
-    }
+    const resposta = this.pessService.deletaPessoa(id);
+    alert(resposta);
+    location.reload();
+     
+  
+}
 
-    return this.formMessage = 'obrigado por registrar-se'
+
+  public onSubmitForm(cadastro:NgForm){
+    console.log(cadastro.form.value);
+    this.pessService.postPessoa(cadastro.form.value);
+    location.reload();
+
+ 
   }
 
 }

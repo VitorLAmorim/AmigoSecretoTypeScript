@@ -1,13 +1,17 @@
 
 
-<ul> <h4 id="campotexto">Digite o Nome: <input id="nome"> </h4>
-    <h4 id="campotexto">Digite o E-mail: <input id="email"> </h4>
-   
-    <button (click)='onSubmitForm()'>Register</button>
+<form #cadastro="ngForm" (ngSubmit)="onSubmitForm(cadastro)"> 
+
+    <h4 class="Legenda">Digite o Nome: <input id="pessoa-name" class="campotexto" name="name" ngModel required #name="ngModel" type="text"> </h4>
+    <h4 class="Legenda">Digite o E-mail: <input id="pessoa-email" class="campotexto" name="email" ngModel type="text"> </h4>
+    <button type="submit" >Register</button>
+</form>
+
+
+<table class="Tabela"> 
+    <thead><tr> <td> Nome</td> <td> E-mail </td> <td> Editar </td> <td> Deletar </td> </tr></thead>
+<tbody><tr *ngFor="let pessoa of pessoa" >
+     <td >{{ pessoa.name }}</td> <td>{{ pessoa.email }}</td>  <td class="action"><button [routerLink]="['/editar', pessoa._id]" class="button">Editar</button> </td> <td class="action">  <button (click)="deleteForm(pessoa._id)" class="button">Deletar</button> </td>
     
-
-</ul>
-
-<ul *ngFor="let pessoa of pessoa">
-    <li id="{{pessoa._id}}">{{ pessoa.name }}: {{ pessoa.email }}</li>
-</ul>
+    
+</tr></tbody></table>
